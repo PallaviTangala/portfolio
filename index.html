@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pallavi Reddy | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<nav>
+    <h2 class="logo">Pallu.dev</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Hi, I'm <span>Pallavi Reddy</span></h1>
+    <h3 class="typing"></h3>
+    <button onclick="scrollToSection()">Explore More</button>
+</header>
+
+<section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+        Passionate Computer Science student focused on Data Science,
+        Machine Learning and real-world problem solving.
+    </p>
+</section>
+
+<section id="skills" class="card">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <p>Python</p>
+        <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Data Science</p>
+        <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Machine Learning</p>
+        <div class="progress"><div style="width:80%"></div></div>
+    </div>
+
+</section>
+
+<section id="projects" class="card">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Sales Data Analysis</h3>
+        <p>Data cleaning & visualization using Pandas & Matplotlib.</p>
+    </div>
+
+    <div class="project">
+        <h3>Water Scarcity Survey</h3>
+        <p>Village survey & awareness program project.</p>
+    </div>
+
+</section>
+
+<section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: yourmail@gmail.com</p>
+    <p>GitHub: github.com/yourusername</p>
+</section>
+
+<footer>
+    <p>© 2026 Pallavi Reddy | All Rights Reserved</p>
+</footer>
+
+<script>
+const text = "Aspiring Data Scientist | Python Developer";
+let i = 0;
+function typingEffect() {
+    if (i < text.length) {
+        document.querySelector(".typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 70);
+    }
+}
+typingEffect();
+
+function scrollToSection(){
+    document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
